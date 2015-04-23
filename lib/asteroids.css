@@ -1,6 +1,12 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 .game {
-  width: 500px;
+  height: 600px;
+  width: 600px;
   margin: 0 auto;
-  background-image: url('galaxy.jpg');
+  background-image: url('bg.jpg');
   background-size: contain;
 }
