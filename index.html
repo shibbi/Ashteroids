@@ -5,7 +5,7 @@
     <title>Asteroids</title>
   </head>
   <body>
-    <div class="game">
+    <div class="game" id="game-wrapper">
       <canvas id='game-canvas' height='600' width='600'></canvas>
     </div>
     <script src='lib/keymaster.js'></script>
@@ -17,6 +17,11 @@
     <script src='lib/game.js'></script>
     <script src='lib/gameView.js'></script>
     <script type="text/javascript">
+      document.getElementById('game-wrapper').setAttribute('height', window.innerHeight);
+      document.getElementById('game-wrapper').setAttribute('width', window.innerWidth);
+      document.getElementById('game-canvas').setAttribute('height', window.innerHeight);
+      document.getElementById('game-canvas').setAttribute('width', window.innerWidth);
+
       var gv = new Asteroids.GameView();
       gv.start();
     </script>
