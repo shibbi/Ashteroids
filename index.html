@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/asteroids.css">
+    <title>Asteroids</title>
+  </head>
+  <body>
+    <div class="game" id="game-wrapper">
+      <canvas id='game-canvas'></canvas>
+    </div>
+    <script src='lib/keymaster.js'></script>
+    <script src='lib/utils.js'></script>
+    <script src='lib/movingObject.js'></script>
+    <script src='lib/asteroids.js'></script>
+    <script src='lib/bullet.js'></script>
+    <script src='lib/ship.js'></script>
+    <script src='lib/game.js'></script>
+    <script src='lib/gameView.js'></script>
+    <script type="text/javascript">
+      $('#game-wrapper').attr('height', window.innerHeight - 3);
+      $('#game-wrapper').attr('width', window.innerWidth);
+      $('#game-canvas').attr('height', window.innerHeight - 3);
+      $('#game-canvas').attr('width', window.innerWidth);
+
+      var theme = new Audio('lib/sounds/pallet_town.mp3');
+      theme.play();
+
+      var gv = new Asteroids.GameView();
+      gv.start();
+    </script>
+  </body>
+</html>
