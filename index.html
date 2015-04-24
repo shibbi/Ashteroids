@@ -23,6 +23,9 @@
       $('#game-canvas').attr('height', window.innerHeight - 3);
       $('#game-canvas').attr('width', window.innerWidth);
 
+      var theme = new Audio('lib/sounds/pallet_town.mp3');
+      theme.play();
+
       var gv = new Asteroids.GameView();
       gv.start();
     </script>
