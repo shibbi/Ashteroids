@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="lib/asteroids.css">
     <title>Asteroids</title>
   </head>
   <body>
-    <div class="game" id="game-wrapper">
+    <div id="game-wrapper">
       <canvas id='game-canvas'></canvas>
     </div>
     <script src='lib/keymaster.js'></script>
@@ -18,10 +18,18 @@
     <script src='lib/game.js'></script>
     <script src='lib/gameView.js'></script>
     <script type="text/javascript">
-      $('#game-wrapper').attr('height', window.innerHeight - 3);
-      $('#game-wrapper').attr('width', window.innerWidth);
-      $('#game-canvas').attr('height', window.innerHeight - 3);
-      $('#game-canvas').attr('width', window.innerWidth);
+      var height = window.innerHeight - 5;
+      var width = window.innerWidth - 5;
+
+      // $('#game-wrapper').attr('height', height);
+      // $('#game-wrapper').attr('width', width);
+      // $('#game-canvas').attr('height', height);
+      // $('#game-canvas').attr('width', width);
+
+      document.getElementById('game-wrapper').setAttribute('height', height);
+      document.getElementById('game-wrapper').setAttribute('width', width);
+      document.getElementById('game-canvas').setAttribute('height', height - 100);
+      document.getElementById('game-canvas').setAttribute('width', width - 100);
 
       var theme = new Audio('lib/sounds/theme.mp3');
       theme.addEventListener('ended', function() {
@@ -30,7 +38,8 @@
       }, false);
       theme.play();
 
-      var gv = new Asteroids.GameView();
+      var gv = new Asteroids.GameView({ height: height - 100,
+                                        width: width - 100 });
       gv.start();
     </script>
   </body>

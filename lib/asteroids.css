@@ -3,8 +3,10 @@ html, body {
   height: 100%;
 }
 
-.game {
+#game-wrapper {
   margin: 0 auto;
+  padding: 50px;
   background-image: url('images/bg.jpg');
   background-size: contain;
+  background-clip: content-box;
 }
