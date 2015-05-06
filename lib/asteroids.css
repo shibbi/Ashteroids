@@ -4,6 +4,12 @@ html, body {
   font-family: 'Helvetica Neue';
 }
 
+h1 { font-size: 36px; }
+
+h3 { font-size: 28px; }
+
+p { font-size: 20px; }
+
 .text-center { text-align: center; }
 
 #game-wrapper {
@@ -22,4 +28,19 @@ html, body {
   padding: 20px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#start-game {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  background-color: rgba(95, 158, 160, 0.5);
+  border-radius: 5px;
+}
+
+#start-game:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
 }
