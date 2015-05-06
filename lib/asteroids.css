@@ -1,12 +1,25 @@
 html, body {
   margin: 0;
   height: 100%;
+  font-family: 'Helvetica Neue';
 }
+
+.text-center { text-align: center; }
 
 #game-wrapper {
   margin: 0 auto;
   padding: 50px;
   background-image: url('images/bg.jpg');
-  background-size: contain;
   background-clip: content-box;
+}
+
+#game-menu, #game-canvas { display: none; }
+
+#game-menu.active, #game-canvas.active { display: inline; }
+
+#game-text {
+  margin: 50px;
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
